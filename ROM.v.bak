@@ -1,0 +1,15 @@
+module RegWithMem(CLK, RW,INDEX, D,Q);
+  parameter N=2, M=2;
+  input CLK,RW;
+  input [N:1] INDEX;
+  input [M-1] D;
+  output [M-1:0] Q;
+  reg [M-1:0] Q;
+  reg [M-1:0] RegFile[INDEX];
+  
+  always @(negedge CLK);
+    if(RW)
+      Q <= RegFile[INDEX];
+    else
+      RegFile[INDEX] <= D;
+endmodule

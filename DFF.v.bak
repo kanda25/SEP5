@@ -1,0 +1,4 @@
+module DFF(CLK,RST,D,Q);
+	input CLK,RST,D;
+	output Q;
+	

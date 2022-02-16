@@ -1,0 +1,11 @@
+module SELECTOR(A,B,SELECT,Z);
+  parameter NBITS = 4;
+  input [NBITS-1:0] A,B;
+  input SELECT;
+  output [NBITS-1:0] Z;
+
+  if(! SELECT)
+    Z = A;
+  else
+    Z = B;
+endmodule

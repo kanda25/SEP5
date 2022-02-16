@@ -1,0 +1,7 @@
+module MooreFSM(A,ClkM, Z);
+	input A,ClkM;
+	output Z;
+	reg Z;
+	
+	parameter 
+	
