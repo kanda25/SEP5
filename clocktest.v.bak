@@ -1,0 +1,24 @@
+module clocktest(
+  input CLK,RST,
+  output reg [6:0] HEX
+);
+
+wire [3:0] Q;
+
+/*ten time clock*/
+
+always @ (posedge CLK, posedge RST) begin
+  if(RST)
+    Q <= 4'b0;
+  else if(Q == 4'd9)
+    Q <= 4'b0;
+  else
+    Q <= Q + 1'b1;
+end
+
+sevenSeg s0(
+  .D(Q),
+  .Q(HEX)
+);
+
+endmodule
