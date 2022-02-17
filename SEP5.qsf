@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY SHIFTER
+set_global_assignment -name TOP_LEVEL_ENTITY cnt60
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "20.1.1 SP1.02I"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "06:27:56  FEBRUARY 10, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "20.1.1 SP1.02i Lite Edition"
@@ -64,12 +64,10 @@ set_global_assignment -name VERILOG_FILE ROM.v
 set_global_assignment -name VERILOG_FILE MooreFSM.v
 set_global_assignment -name VERILOG_FILE DFF_ORG.v
 set_global_assignment -name VERILOG_FILE COUNTER.v
-set_location_assignment PIN_Y23 -to CLK
-set_location_assignment PIN_E24 -to Q[3]
-set_location_assignment PIN_E25 -to Q[2]
-set_location_assignment PIN_E22 -to Q[1]
-set_location_assignment PIN_E21 -to Q[0]
-set_location_assignment PIN_M23 -to RST
+set_location_assignment PIN_L26 -to Q[3]
+set_location_assignment PIN_E17 -to Q[2]
+set_location_assignment PIN_F22 -to Q[1]
+set_location_assignment PIN_G18 -to Q[0]
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name VERILOG_FILE SELECTOR.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
@@ -79,10 +77,24 @@ set_global_assignment -name VERILOG_FILE FA.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform2.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform3.vwf
 set_global_assignment -name VERILOG_FILE SHIFTER.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform4.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform5.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform6.vwf
+set_global_assignment -name VERILOG_FILE sevenSeg.v
+set_global_assignment -name VERILOG_FILE RemoveChatter.v
+set_global_assignment -name VERILOG_FILE cnt1sec.v
+set_global_assignment -name VERILOG_FILE cnt60.v
+set_global_assignment -name VERILOG_FILE clock1.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform7.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform8.vwf
+set_location_assignment PIN_AD27 -to D[3]
+set_location_assignment PIN_AC27 -to D[2]
+set_location_assignment PIN_AC28 -to D[1]
+set_location_assignment PIN_AB28 -to D[0]
+set_location_assignment PIN_H22 -to Q[6]
+set_location_assignment PIN_J22 -to Q[5]
+set_location_assignment PIN_L25 -to Q[4]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

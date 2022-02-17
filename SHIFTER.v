@@ -36,7 +36,10 @@ module SHIFTER(A,OpCode,Q,C);
       S[NBITS-1] = A[0];
       C = A[0];
     end
-    default : S = 4'b0000, C = 1'b0;
+    default : begin
+      S = 4'b0000;
+      C = 1'b0;
+    end
     endcase
 
     assign Q = S;
